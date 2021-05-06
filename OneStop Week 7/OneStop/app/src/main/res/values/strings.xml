@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">OneStop</string>
+    <string name="slogan_name">Find your way in Melbourne City!</string>
+    <string name="splash_screen">Splash Screen Image</string>
+    <string name="by_dhruv_nargund">By Dhruv Nargund</string>
+    <string name="search">Search...</string>
+    <string name="these_are_the_locations_that_you_ve_viewed_recently">Places you have recently showed interest in !</string>
+    <string name="all_activities_in_melbourne"><![CDATA[ALL ACTIVITIES IN MELBOURNE ->]]></string>
+
+</resources>
