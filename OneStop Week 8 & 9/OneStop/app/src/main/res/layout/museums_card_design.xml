@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="150dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_museum_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="10dp"
+            app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:id="@+id/image_view_museum"
+                android:layout_width="115dp"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                tools:src="@mipmap/ic_launcher" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/text_view_museum_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/card_view_museum_image"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="@string/app_title" />
+
+        <TextView
+            android:id="@+id/text_view_museum_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_museum_title"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/card_view_museum_image"
+            android:textColor="@color/cardview_dark_background"
+            tools:text="@string/this_is_a_sample_description_for_the_location_that_is_going_to_be_featured_here_to_check_how_much_text_we_can_actually_fit_it_is_a_placeholder" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
