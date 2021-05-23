@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".spots.spotpages.EurekaTower">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/eureka_wallapper" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_item_data"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginTop="280dp"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/text_view_eureka_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Eureka Tower"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+
+                <RatingBar
+                    android:id="@+id/rating_bar_eureka"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/text_view_eureka_title"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="20dp"
+                    android:progressTint="#FFCC01"
+                    android:rating="5" />
+
+                <RelativeLayout
+                    android:id="@+id/eureka_directions_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/rating_bar_eureka"
+                    android:layout_alignEnd="@id/rating_bar_eureka">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_alignBottom="@id/image_view_location_pin"
+                        android:layout_toStartOf="@id/image_view_location_pin"
+                        android:gravity="bottom"
+                        android:text="Directions"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/image_view_location_pin"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:paddingStart="4dp"
+                        android:paddingBottom="3dp"
+                        android:src="@drawable/location_pin" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/eureka_directions_button"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="25dp"
+                    android:justificationMode="inter_word"
+                    android:text="Eureka Tower is a 297.3 m (975 ft) skyscraper located in the Southbank precinct of Melbourne, Victoria, Australia. Construction began in August 2002 and the exterior was completed on 1 June 2006. The plaza was finished in June 2006 and the building was officially opened on 11 October 2006. The project was designed by Melbourne architectural firm Fender Katsalidis Architects and was built by Grocon (Grollo Australia). The developer of the tower was Eureka Tower Pty Ltd, a joint venture consisting of Daniel Grollo (Grocon), investor Tab Fried and one of the Tower's architects Nonda Katsalidis. It was the world's tallest residential tower when measured to its highest floor, until surpassed by Ocean Heights and the HHHR Tower in Dubai. From 2006 to 2019, it was the tallest building in Melbourne, until the topping out of Australia 108. It is currently the third tallest building in Australia, behind the Q1 in Queensland and Australia 108, as well as the second tallest to roof (excluding spire) behind the latter skyscraper."
+                    android:textColor="#3C3B3B"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_all_spots_eureka_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_view_item_data"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:ignore="InvalidId" />
+    </RelativeLayout>
+
+</ScrollView>

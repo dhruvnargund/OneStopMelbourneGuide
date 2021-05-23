@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".spots.spotpages.ShrineRemembrance">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/shrine_wallpaper" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_item_data"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginTop="280dp"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/text_view_shrine_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Shrine of Remembrance"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+
+                <RatingBar
+                    android:id="@+id/rating_bar_shrine"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/text_view_shrine_title"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="20dp"
+                    android:progressTint="#FFCC01"
+                    android:rating="5" />
+
+                <RelativeLayout
+                    android:id="@+id/shrine_directions_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/rating_bar_shrine"
+                    android:layout_alignEnd="@id/rating_bar_shrine">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_alignBottom="@id/image_view_location_pin"
+                        android:layout_toStartOf="@id/image_view_location_pin"
+                        android:gravity="bottom"
+                        android:text="Directions"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/image_view_location_pin"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:paddingStart="4dp"
+                        android:paddingBottom="3dp"
+                        android:src="@drawable/location_pin" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/shrine_directions_button"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="25dp"
+                    android:justificationMode="inter_word"
+                    android:text="The Shrine of Remembrance (commonly referred to as The Shrine) is a war memorial in Melbourne, Victoria, Australia, located in Kings Domain on St Kilda Road. It was built to honour the men and women of Victoria who served in World War I, but now functions as a memorial to all Australians who have served in any war. It is a site of annual observances for ANZAC Day (25 April) and Remembrance Day (11 November), and is one of the largest war memorials in Australia. Designed by architects Phillip Hudson and James Wardrop, both World War I veterans, the Shrine is in classical style, based on the Tomb of Mausolus at Halicarnassus and the Parthenon in Athens, Greece."
+                    android:textColor="#3C3B3B"
+                    android:textSize="16sp" />
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_all_spots_shrine_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_view_item_data"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:ignore="InvalidId" />
+    </RelativeLayout>
+
+</ScrollView>

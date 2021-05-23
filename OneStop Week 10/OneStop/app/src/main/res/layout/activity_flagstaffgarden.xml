@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".parks.parkpages.Flagstaffgarden">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/flagstaff_wallpaper" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_item_data"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginTop="280dp"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/text_view_flagstaff_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Flagstaff Gardens"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+
+                <RatingBar
+                    android:id="@+id/rating_bar_flagstaff"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/text_view_flagstaff_title"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="20dp"
+                    android:progressTint="#FFCC01"
+                    android:rating="4.5" />
+
+                <RelativeLayout
+                    android:id="@+id/flagstaff_directions_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/rating_bar_flagstaff"
+                    android:layout_alignEnd="@id/rating_bar_flagstaff">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_alignBottom="@id/image_view_location_pin"
+                        android:layout_toStartOf="@id/image_view_location_pin"
+                        android:gravity="bottom"
+                        android:text="Directions"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/image_view_location_pin"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:paddingStart="4dp"
+                        android:paddingBottom="3dp"
+                        android:src="@drawable/location_pin" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/flagstaff_directions_button"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="25dp"
+                    android:justificationMode="inter_word"
+                    android:text="Flagstaff Gardens is the oldest park in Melbourne, Victoria, Australia, first established in 1862. Today it is one of the most visited and widely used parks in the city by residents, nearby office workers and tourists. The gardens are notable for their archaeological, horticultural, historical and social significance to the history of Melbourne. The gardens are 7.2 hectares (18 acres) of Crown Land bounded by William, La Trobe, King and Dudley streets, managed by the City of Melbourne. On the southeast corner opposite is the entrance to Flagstaff railway station. Diagonally opposite stands the Victorian branch of the Royal Mint, established 7 August 1869. The former Royal Mint building is a well-preserved example of Victorian Gold Rush boom-period classical styled architecture. The facade features paired columns with scrolled capitals and the Royal Mint coat-of-arms."
+                    android:textColor="#3C3B3B"
+                    android:textSize="16sp" />
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_all_parks_flagstaff_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_view_item_data"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:ignore="InvalidId" />
+    </RelativeLayout>
+</ScrollView>

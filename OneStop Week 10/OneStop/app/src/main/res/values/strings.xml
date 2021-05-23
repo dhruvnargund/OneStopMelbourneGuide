@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">OneStop</string>
+    <string name="slogan_name">Find your way in Melbourne City!</string>
+    <string name="splash_screen">Splash Screen Image</string>
+    <string name="by_dhruv_nargund">By Dhruv Nargund</string>
+    <string name="search">Search...</string>
+    <string name="these_are_the_locations_that_you_ve_viewed_recently">These are the locations people showed most the interest in !</string>
+    <string name="all_activities_in_melbourne">ALL ACTIVITIES IN MELBOURNE -></string>
+    <string name="app_title">App Title</string>
+    <string name="this_is_a_sample_description_for_the_location_that_is_going_to_be_featured_here_to_check_how_much_text_we_can_actually_fit_it_is_a_placeholder">This is a sample description for the location that is going to be featured here to check how much text we can actually fit. it is a placeholder</string>
+    <string name="most_nviewed_nlocations">MOST\nVIEWED\nLOCATIONS</string>
+    <string name="museums_and_art_galleries">MUSEUMS AND ART GALLERIES-></string>
+    <string name="parks_gardens">PARKS AND GARDENS-></string>
+    <string name="melbourne_travel_tips">MELBOURNE TRAVEL TIPS-></string>
+</resources>

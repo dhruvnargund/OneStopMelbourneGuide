@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".parks.parkpages.TreasuryGardens">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/treasury_wallpaper" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_item_data"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginTop="280dp"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/text_view_treasury_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Treasury Gardens"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+
+                <RatingBar
+                    android:id="@+id/rating_bar_treasury"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/text_view_treasury_title"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="20dp"
+                    android:progressTint="#FFCC01"
+                    android:rating="5" />
+
+                <RelativeLayout
+                    android:id="@+id/treasury_directions_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/rating_bar_treasury"
+                    android:layout_alignEnd="@id/rating_bar_treasury">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_alignBottom="@id/image_view_location_pin"
+                        android:layout_toStartOf="@id/image_view_location_pin"
+                        android:gravity="bottom"
+                        android:text="Directions"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/image_view_location_pin"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:paddingStart="4dp"
+                        android:paddingBottom="3dp"
+                        android:src="@drawable/location_pin" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/treasury_directions_button"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="25dp"
+                    android:justificationMode="inter_word"
+                    android:text="The Treasury Gardens consist of 5.8 hectares (14 acres) on the south-eastern side of the Melbourne Central Business District, East Melbourne, Victoria, Australia. The gardens are bounded by Wellington Parade, Spring Street, Treasury Place, and by the Fitzroy Gardens across Lansdowne street to the west. They form part of a network of city gardens including Fitzroy Gardens, Carlton Gardens, Flagstaff Gardens and Kings Domain. The gardens are listed on the Victorian Heritage Register for their historical, archaeological, social, ''aesthetic and scientific (horticultural) importance for its outstanding nineteenth century design, path layout and planting''."
+                    android:textColor="#3C3B3B"
+                    android:textSize="16sp" />
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_all_parks_treasury_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_view_item_data"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:ignore="InvalidId" />
+    </RelativeLayout>
+
+</ScrollView>

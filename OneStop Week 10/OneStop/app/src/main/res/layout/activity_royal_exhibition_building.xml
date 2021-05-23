@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".museums.museumpages.RoyalExhibitionBuilding">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/royal_exhibition_wallpaper" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_item_data"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginTop="280dp"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/text_view_royal_exhibition_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Royal Exhibition Building"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+
+                <RatingBar
+                    android:id="@+id/rating_bar_royal_exhibition"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/text_view_royal_exhibition_title"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="20dp"
+                    android:progressTint="#FFCC01"
+                    android:rating="4.5" />
+
+                <RelativeLayout
+                    android:id="@+id/royal_exhibition_directions_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/rating_bar_royal_exhibition"
+                    android:layout_alignEnd="@id/rating_bar_royal_exhibition">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_alignBottom="@id/image_view_location_pin"
+                        android:layout_toStartOf="@id/image_view_location_pin"
+                        android:gravity="bottom"
+                        android:text="Directions"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/image_view_location_pin"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:paddingStart="4dp"
+                        android:paddingBottom="3dp"
+                        android:src="@drawable/location_pin" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/royal_exhibition_directions_button"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="25dp"
+                    android:justificationMode="inter_word"
+                    android:text="The Royal Exhibition Building is a World Heritage-listed building in Melbourne, Victoria, Australia, built in 1879-80 as part of the international exhibition movement, which presented over 50 exhibitions between 1851 and 1915 around the globe. The building sits on approximately 26 hectares (64 acres), is 150 metres (490 ft) long and is surrounded by four city streets.[1] It is at 9 Nicholson Street in the Carlton Gardens, flanked by Victoria, Carlton and Rathdowne Streets, at the north-eastern edge of the central business district. It was built to host the Melbourne International Exhibition in 1880–81, and then hosted the even larger Centennial International Exhibition in 1888, and the formal opening of the first Parliament of Australia in 1901. The building is representative of the money and pride Victoria had in the 1870s."
+                    android:textColor="#3C3B3B"
+                    android:textSize="16sp" />
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_all_museums_royal_exhibition_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_view_item_data"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:ignore="InvalidId" />
+    </RelativeLayout>
+
+</ScrollView>

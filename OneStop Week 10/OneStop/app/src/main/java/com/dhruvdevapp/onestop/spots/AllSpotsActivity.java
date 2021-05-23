@@ -1,0 +1,162 @@
+package com.dhruvdevapp.onestop.spots;
+
+import android.content.Intent;
+import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.dhruvdevapp.onestop.R;
+import com.dhruvdevapp.onestop.spots.spotpages.BlockArcade;
+import com.dhruvdevapp.onestop.spots.spotpages.Chinatown;
+import com.dhruvdevapp.onestop.spots.spotpages.CrownCasino;
+import com.dhruvdevapp.onestop.spots.spotpages.Docklands;
+import com.dhruvdevapp.onestop.spots.spotpages.EurekaTower;
+import com.dhruvdevapp.onestop.spots.spotpages.FederationSquare;
+import com.dhruvdevapp.onestop.spots.spotpages.FlindersRailway;
+import com.dhruvdevapp.onestop.spots.spotpages.HosierLane;
+import com.dhruvdevapp.onestop.spots.spotpages.LunaPark;
+import com.dhruvdevapp.onestop.spots.spotpages.MelbourneAquarium;
+import com.dhruvdevapp.onestop.spots.spotpages.MelbourneStar;
+import com.dhruvdevapp.onestop.spots.spotpages.MelbourneZoo;
+import com.dhruvdevapp.onestop.spots.spotpages.Parliament;
+import com.dhruvdevapp.onestop.spots.spotpages.PuffingBilly;
+import com.dhruvdevapp.onestop.spots.spotpages.QueenVictoriaMarket;
+import com.dhruvdevapp.onestop.spots.spotpages.ShrineRemembrance;
+import com.dhruvdevapp.onestop.spots.spotpages.SouthBank;
+import com.dhruvdevapp.onestop.spots.spotpages.StPatrik;
+import com.dhruvdevapp.onestop.spots.spotpages.StPaulsWallpaper;
+import com.dhruvdevapp.onestop.spots.spotpages.StateLibrary;
+
+import java.util.ArrayList;
+
+public class AllSpotsActivity extends AppCompatActivity implements SpotsClickInterface {
+
+    RecyclerView recyclerView;
+    SpotsAdapter spotsAdapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_all_spots);
+
+        recyclerView = findViewById(R.id.recycler_view_all_spots);
+        spotsArrayMethod();
+
+    }
+
+    private void spotsArrayMethod() {
+        ArrayList<Spots> spotsArrayList = new ArrayList<>();
+        spotsArrayList.add(new Spots(R.drawable.federation_square_wallpaper, "Federation Square", "Two connecting central squares, surrounded by important buildings.", 5f));
+        spotsArrayList.add(new Spots(R.drawable.eureka_wallapper, "Eureka Tower", "A Skyscraper rising almost 300 meters with an observation deck.", 5f));
+        spotsArrayList.add(new Spots(R.drawable.st_paul_wallpaper, "St. Pauls Cathedral", "Neo-classical structure completed in 1931 with beautiful interior.", 5f));
+        spotsArrayList.add(new Spots(R.drawable.queen_victoria_wallpaper, "Queen Victoria Market", "An historic market selling fresh produce and everything else.", 5f));
+        spotsArrayList.add(new Spots(R.drawable.aquarium_wallpaper, "Melbourne Aquarium", "The Sealife Melbourne Aquarium is home to more than 10,000 creatures from all the oceans.", 4.5f));
+        spotsArrayList.add(new Spots(R.drawable.crown_wallpaper, "Crown Casino and Entertainment Complex", "Enjoy stores, restaurants, casinos, bowling, spas, hotels, cinema and games.", 5f));
+        spotsArrayList.add(new Spots(R.drawable.shrine_wallpaper, "Shrine of Remembrance", "Shrine honoring the Australian armed forces lost in World War I.", 5f));
+        spotsArrayList.add(new Spots(R.drawable.st_patrik_wallpaper, "St. Patricks Cathedral", "Gothic-Revival church and the tallest and the largest church in Australia.", 4.5f));
+        spotsArrayList.add(new Spots(R.drawable.parliament_wallpaper, "Parliament House Victoria", "An 1856 landmark bluestone building.", 4.5f));
+        spotsArrayList.add(new Spots(R.drawable.melbourne_museum_wallpaper, "Melbourne Zoo", "More than 300 species of animals from all around the world live in this amazing zoo", 4.7f));
+        spotsArrayList.add(new Spots(R.drawable.luna_wallpaper, "Luna Park", "Luna Park is a historic amusement park with 18 rides", 4f));
+        spotsArrayList.add(new Spots(R.drawable.a_and_l_wallapaper, "The Block Arcade", "A labyrinth of lanes and alleyways around Flinders, Collins, and Bourke Streets reveals a quirky Melbourne at its best", 5f));
+        spotsArrayList.add(new Spots(R.drawable.docklands_wallapaper, "Docklands", "Docklands is Melbourne's newest waterfront entertainment precinct.", 4.5f));
+        spotsArrayList.add(new Spots(R.drawable.southbank_wallpaper, "Southbank and Arts Centre Melbourne", "On the banks of the Yarra River, a short stroll from Flinders Street Station, this area is packed with cultural attractions", 5f));
+        spotsArrayList.add(new Spots(R.drawable.flinders_wallpaper, "Flinders Street Railway Station", "Opened in 1854, the historic station serves the entire metropolitan rail network.", 4.4f));
+        spotsArrayList.add(new Spots(R.drawable.puffing_wallpaper, "Puffing Billy Railway", "It is an open-air train for beautiful natural rainforest views", 4.5f));
+        spotsArrayList.add(new Spots(R.drawable.star_wallpaper, "Melbourne Star Observation Wheel", "A giant ferris wheel with glass cabins", 4.4f));
+        spotsArrayList.add(new Spots(R.drawable.library_wallpaper, "State Library Victoria", "Central hub in 19th century buildings", 4.7f));
+        spotsArrayList.add(new Spots(R.drawable.chinatown_wallpaper, "Chinatown Melbourne", "Chinatown is an ethnic enclave in the Central Business District of Melbourne, Victoria, Australia.", 4.2f));
+        spotsArrayList.add(new Spots(R.drawable.lane_wallpaper, "Hosier Lane", "From the late 1990s, Hosier Lane is a popular tourist attraction due to its street art.", 4f));
+
+        spotsAdapter = new SpotsAdapter(spotsArrayList, this);
+        recyclerView.setAdapter(spotsAdapter);
+    }
+
+    @Override
+    public void onSpotClick(int position) {
+        Intent intent;
+        switch (position) {
+            case 0:
+                intent = new Intent(AllSpotsActivity.this, FederationSquare.class);
+                startActivity(intent);
+                break;
+            case 1:
+                intent = new Intent(AllSpotsActivity.this, EurekaTower.class);
+                startActivity(intent);
+                break;
+            case 2:
+                intent = new Intent(AllSpotsActivity.this, StPaulsWallpaper.class);
+                startActivity(intent);
+                break;
+            case 3:
+                intent = new Intent(AllSpotsActivity.this, QueenVictoriaMarket.class);
+                startActivity(intent);
+                break;
+            case 4:
+                intent = new Intent(AllSpotsActivity.this, MelbourneAquarium.class);
+                startActivity(intent);
+                break;
+            case 5:
+                intent = new Intent(AllSpotsActivity.this, CrownCasino.class);
+                startActivity(intent);
+                break;
+            case 6:
+                intent = new Intent(AllSpotsActivity.this, ShrineRemembrance.class);
+                startActivity(intent);
+                break;
+            case 7:
+                intent = new Intent(AllSpotsActivity.this, StPatrik.class);
+                startActivity(intent);
+                break;
+            case 8:
+                intent = new Intent(AllSpotsActivity.this, Parliament.class);
+                startActivity(intent);
+                break;
+            case 9:
+                intent = new Intent(AllSpotsActivity.this, MelbourneZoo.class);
+                startActivity(intent);
+                break;
+            case 10:
+                intent = new Intent(AllSpotsActivity.this, LunaPark.class);
+                startActivity(intent);
+                break;
+            case 11:
+                intent = new Intent(AllSpotsActivity.this, BlockArcade.class);
+                startActivity(intent);
+                break;
+            case 12:
+                intent = new Intent(AllSpotsActivity.this, Docklands.class);
+                startActivity(intent);
+                break;
+            case 13:
+                intent = new Intent(AllSpotsActivity.this, SouthBank.class);
+                startActivity(intent);
+                break;
+            case 14:
+                intent = new Intent(AllSpotsActivity.this, FlindersRailway.class);
+                startActivity(intent);
+                break;
+            case 15:
+                intent = new Intent(AllSpotsActivity.this, PuffingBilly.class);
+                startActivity(intent);
+                break;
+            case 16:
+                intent = new Intent(AllSpotsActivity.this, MelbourneStar.class);
+                startActivity(intent);
+                break;
+            case 17:
+                intent = new Intent(AllSpotsActivity.this, StateLibrary.class);
+                startActivity(intent);
+                break;
+            case 18:
+                intent = new Intent(AllSpotsActivity.this, Chinatown.class);
+                startActivity(intent);
+                break;
+            default:
+                intent = new Intent(AllSpotsActivity.this, HosierLane.class);
+                startActivity(intent);
+                break;
+
+        }
+    }
+}
