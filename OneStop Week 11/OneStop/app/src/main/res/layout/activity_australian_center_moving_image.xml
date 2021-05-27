@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".museums.museumpages.AustralianCenterMovingImage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/acmi_wallpaper"
+            tools:ignore="ContentDescription" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_item_data"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginTop="280dp"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/text_view_acmi_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/australian_center_for_the_moving_image"
+                    android:textColor="@color/black"
+                    app:autoSizeMaxTextSize="100sp"
+                    app:autoSizeMinTextSize="20sp"
+                    app:autoSizeStepGranularity="2sp"
+                    app:autoSizeTextType="uniform" />
+
+
+                <RatingBar
+                    android:id="@+id/rating_bar_acmi"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_view_acmi_title"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="10dp"
+                    android:progressTint="#FFCC01"
+                    android:rating="5" />
+
+                <RelativeLayout
+                    android:id="@+id/acmi_directions_button"
+                    android:layout_width="108dp"
+                    android:layout_height="22dp"
+                    android:layout_below="@id/rating_bar_acmi"
+                    android:layout_alignEnd="@id/rating_bar_acmi">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_alignBottom="@id/image_view_location_pin"
+                        android:layout_toStartOf="@id/image_view_location_pin"
+                        android:gravity="bottom"
+                        android:text="@string/directions"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/image_view_location_pin"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:paddingStart="4dp"
+                        android:paddingBottom="3dp"
+                        android:src="@drawable/location_pin"
+                        tools:ignore="RtlSymmetry" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="360dp"
+                    android:layout_below="@id/acmi_directions_button"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="25dp"
+                    android:justificationMode="inter_word"
+                    android:text="@string/the_australian_centre_for_the_moving_image_acmi_at_federation_square_melbourne_is_australia_s_national_museum_of_film_video_games_digital_culture_and_art_acmi_started_life_as_the_state_film_centre_of_victoria_in_1946_during_the_2015_16_financial_year_1_45_million_people_visited_acmi_the_second_highest_attendance_of_any_gallery_or_museum_in_australia_and_the_most_visited_moving_image_museum_in_the_world_in_may_2019_acmi_closed_to_the_public_to_begin_a_40_million_redevelopment_on_1_january_2002_the_australian_centre_for_the_moving_image_was_officially_established_by_the_film_act_2001_victoria_the_first_stage_was_opened_in_october_with_two_exhibitions_deep_space_sensation_and_immersion_and_ngarinyin_pathways_dulwan_running_in_acmi_s_screen_gallery_a_few_weeks_later_acmi_cinemas_officially_opened"
+                    android:textColor="#3C3B3B"
+                    app:autoSizeMaxTextSize="100sp"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeStepGranularity="2sp"
+                    app:autoSizeTextType="uniform"
+                    tools:targetApi="o" />
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_all_museums_acmi_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_view_item_data"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:ignore="InvalidId" />
+    </RelativeLayout>
+
+</ScrollView>

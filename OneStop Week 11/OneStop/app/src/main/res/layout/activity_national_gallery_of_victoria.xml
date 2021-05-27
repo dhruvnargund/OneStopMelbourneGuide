@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    tools:context=".museums.museumpages.NationalGalleryOfVictoria">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ngv_wallpaper"
+            tools:ignore="ContentDescription" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_item_data"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginTop="280dp"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/text_view_ngv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/national_gallery_of_victoria"
+                    android:textColor="@color/black"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeMaxTextSize="100sp"
+                    app:autoSizeStepGranularity="2sp" />
+
+
+                <RatingBar
+                    android:id="@+id/rating_bar_ngv"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_view_ngv_title"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:progressTint="#FFCC01"
+                    android:rating="5" />
+
+                <RelativeLayout
+                    android:id="@+id/ngv_directions_button"
+                    android:layout_width="108dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/rating_bar_ngv"
+                    android:layout_alignEnd="@id/rating_bar_ngv">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_alignBottom="@id/image_view_location_pin"
+                        android:layout_toStartOf="@id/image_view_location_pin"
+                        android:gravity="bottom"
+                        android:text="@string/directions"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/image_view_location_pin"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:paddingStart="4dp"
+                        android:paddingBottom="3dp"
+                        android:src="@drawable/location_pin"
+                        tools:ignore="ContentDescription,RtlSymmetry" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="360dp"
+                    android:layout_below="@id/ngv_directions_button"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="25dp"
+                    android:justificationMode="inter_word"
+                    android:text="@string/the_national_gallery_of_victoria_is_an_art_gallery_and_museum_in_melbourne_australia_started_in_1861_it_is_the_oldest_and_the_largest_public_art_gallery_in_australia_the_main_gallery_is_located_in_st_kilda_road_at_southbank_with_a_branch_gallery_at_federation_square_the_st_kilda_road_gallery_designed_by_sir_roy_grounds_opened_in_1968_since_december_2003_ngv_has_operated_across_two_sites_ngv_international_on_st_kilda_road_redesigned_by_mario_bellini_and_the_ian_potter_centre_ngv_australia_at_federation_square_designed_by_lab_architecture_studio_when_the_gallery_opened_victoria_had_been_an_independent_colony_for_ten_years_after_the_victorian_gold_rush_it_was_easily_the_richest_part_of_australia_and_melbourne_the_largest_city_generous_gifts_from_rich_citizens_including_the_industrialist_alfred_felton_made_it_possible_for_the_national_gallery_to_start_buying_large_collections_of_overseas_works_from_both_old_and_modern_masters_it_has_over_65_000_works_of_art"
+                    android:textColor="#3C3B3B"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeMaxTextSize="100sp"
+                    app:autoSizeStepGranularity="2sp"
+                    tools:targetApi="o" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_all_museums_ngv_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_view_item_data"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:ignore="InvalidId" />
+    </RelativeLayout>
+</ScrollView>

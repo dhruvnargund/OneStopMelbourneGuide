@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".spots.spotpages.EurekaTower">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/eureka_wallapper"
+            tools:ignore="ContentDescription" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_item_data"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginTop="280dp"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/text_view_eureka_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/eureka_tower"
+                    android:textColor="@color/black"
+                    app:autoSizeMaxTextSize="100sp"
+                    app:autoSizeMinTextSize="20sp"
+                    app:autoSizeStepGranularity="2sp"
+                    app:autoSizeTextType="uniform" />
+
+
+                <RatingBar
+                    android:id="@+id/rating_bar_eureka"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/text_view_eureka_title"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="20dp"
+                    android:progressTint="#FFCC01"
+                    android:rating="5" />
+
+                <RelativeLayout
+                    android:id="@+id/eureka_directions_button"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/rating_bar_eureka"
+                    android:layout_alignEnd="@id/rating_bar_eureka">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_alignBottom="@id/image_view_location_pin"
+                        android:layout_toStartOf="@id/image_view_location_pin"
+                        android:gravity="bottom"
+                        android:text="@string/directions"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/image_view_location_pin"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:paddingStart="4dp"
+                        android:paddingBottom="3dp"
+                        android:src="@drawable/location_pin"
+                        tools:ignore="ContentDescription,RtlSymmetry" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="370dp"
+                    android:layout_below="@id/eureka_directions_button"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="25dp"
+                    android:justificationMode="inter_word"
+                    android:text="@string/eureka_tower_is_a_297_3_m_975_ft_skyscraper_located_in_the_southbank_precinct_of_melbourne_victoria_australia_construction_began_in_august_2002_and_the_exterior_was_completed_on_1_june_2006_the_plaza_was_finished_in_june_2006_and_the_building_was_officially_opened_on_11_october_2006_the_project_was_designed_by_melbourne_architectural_firm_fender_katsalidis_architects_and_was_built_by_grocon_grollo_australia_the_developer_of_the_tower_was_eureka_tower_pty_ltd_a_joint_venture_consisting_of_daniel_grollo_grocon_investor_tab_fried_and_one_of_the_tower_s_architects_nonda_katsalidis_it_was_the_world_s_tallest_residential_tower_when_measured_to_its_highest_floor_until_surpassed_by_ocean_heights_and_the_hhhr_tower_in_dubai_from_2006_to_2019_it_was_the_tallest_building_in_melbourne_until_the_topping_out_of_australia_108_it_is_currently_the_third_tallest_building_in_australia_behind_the_q1_in_queensland_and_australia_108_as_well_as_the_second_tallest_to_roof_excluding_spire_behind_the_latter_skyscraper"
+                    android:textColor="#3C3B3B"
+                    app:autoSizeMaxTextSize="100sp"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeStepGranularity="2sp"
+                    app:autoSizeTextType="uniform"
+                    tools:targetApi="o" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_all_spots_eureka_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_view_item_data"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:ignore="InvalidId" />
+    </RelativeLayout>
+
+</ScrollView>

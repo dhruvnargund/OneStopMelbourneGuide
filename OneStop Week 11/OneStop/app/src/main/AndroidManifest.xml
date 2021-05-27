@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dhruvdevapp.onestop">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.OneStop"
+        tools:ignore="ExtraText">
+        <activity
+            android:name=".RegistrationActivity"
+            android:parentActivityName=".LoginActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:parentActivityName=".HomeScreen" />
+
+        <activity
+            android:name=".spots.spotpages.HosierLane"
+            android:parentActivityName=".spots.AllSpotsActivity" />
+        <activity
+            android:name=".spots.spotpages.Chinatown"
+            android:parentActivityName=".spots.AllSpotsActivity" />
+        <activity
+            android:name=".spots.spotpages.StateLibrary"
+            android:parentActivityName=".spots.AllSpotsActivity" />
+        <activity
+            android:name=".spots.spotpages.MelbourneStar"
+            android:parentActivityName=".spots.AllSpotsActivity" />
+        <activity
+            android:name=".spots.spotpages.PuffingBilly"
+            android:parentActivityName=".spots.AllSpotsActivity" />
+        <activity
+            android:name=".spots.spotpages.FlindersRailway"
+            android:parentActivityName=".spots.AllSpotsActivity" />
+        <activity
+            android:name=".spots.spotpages.SouthBank"
+            android:parentActivityName=".spots.AllSpotsActivity" />
+        <activity
+            android:name=".spots.spotpages.Docklands"
+            android:parentActivityName=".spots.AllSpotsActivity" />
+        <activity
+            android:name=".spots.spotpages.BlockArcade"
+            android:parentActivityName=".spots.AllSpotsActivity" />
+        <activity
+            android:name=".spots.spotpages.LunaPark"
+            android:parentActivityName=".spots.AllSpotsActivity" />
+        <activity
+            android:name=".spots.spotpages.MelbourneZoo"
+            android:parentActivityName=".spots.AllSpotsActivity" />
+        <activity
+            android:name=".spots.spotpages.Parliament"
+            android:parentActivityName=".spots.AllSpotsActivity" />
+        <activity
+            android:name=".spots.spotpages.StPatrik"
+            android:parentActivityName=".spots.AllSpotsActivity" />
+        <activity
+            android:name=".spots.spotpages.ShrineRemembrance"
+            android:parentActivityName=".spots.AllSpotsActivity" />
+        <activity
+            android:name=".spots.spotpages.CrownCasino"
+            android:parentActivityName=".spots.AllSpotsActivity" />
+        <activity
+            android:name=".spots.spotpages.MelbourneAquarium"
+            android:parentActivityName=".spots.AllSpotsActivity" />
+        <activity
+            android:name=".spots.spotpages.QueenVictoriaMarket"
+            android:parentActivityName=".spots.AllSpotsActivity" />
+        <activity
+            android:name=".spots.spotpages.StPaulsWallpaper"
+            android:parentActivityName=".spots.AllSpotsActivity" />
+        <activity
+            android:name=".spots.spotpages.EurekaTower"
+            android:parentActivityName=".spots.AllSpotsActivity" />
+        <activity
+            android:name=".spots.spotpages.FederationSquare"
+            android:parentActivityName=".spots.AllSpotsActivity" />
+        <activity
+            android:name=".parks.parkpages.AlexandraGarden"
+            android:parentActivityName=".parks.AllParksActivity" />
+        <activity
+            android:name=".parks.parkpages.TreasuryGardens"
+            android:parentActivityName=".parks.AllParksActivity" />
+        <activity
+            android:name=".parks.parkpages.CarltonGarden"
+            android:parentActivityName=".parks.AllParksActivity" />
+        <activity
+            android:name=".parks.parkpages.Flagstaffgarden"
+            android:parentActivityName=".parks.AllParksActivity" />
+        <activity
+            android:name=".parks.parkpages.FitzroyGarden"
+            android:parentActivityName=".parks.AllParksActivity" />
+        <activity
+            android:name=".parks.parkpages.RoyalBotanicalGarden"
+            android:parentActivityName=".parks.AllParksActivity" />
+        <activity
+            android:name=".museums.museumpages.Scienceworks"
+            android:parentActivityName=".museums.AllMuseumsActivity" />
+        <activity
+            android:name=".museums.museumpages.ArtVoImmersiveArtGallery"
+            android:parentActivityName=".museums.AllMuseumsActivity" />
+        <activity
+            android:name=".museums.museumpages.NationalSportsMuseum"
+            android:parentActivityName=".museums.AllMuseumsActivity" />
+        <activity android:name=".museums.museumpages.PollyWoodside" />
+        <activity
+            android:name=".museums.museumpages.RoyalExhibitionBuilding"
+            android:parentActivityName=".museums.AllMuseumsActivity" />
+        <activity
+            android:name=".museums.museumpages.MelbourneMuseum"
+            android:parentActivityName=".museums.AllMuseumsActivity" />
+        <activity
+            android:name=".museums.museumpages.OldMelbourneGaol"
+            android:parentActivityName=".museums.AllMuseumsActivity" />
+        <activity
+            android:name=".museums.museumpages.IanPotterCenter"
+            android:parentActivityName=".museums.AllMuseumsActivity" />
+        <activity
+            android:name=".museums.museumpages.AustralianCenterMovingImage"
+            android:parentActivityName=".museums.AllMuseumsActivity" />
+        <activity
+            android:name=".museums.museumpages.NationalGalleryOfVictoria"
+            android:parentActivityName=".museums.AllMuseumsActivity" />
+        <activity
+            android:name=".parks.AllParksActivity"
+            android:parentActivityName=".HomeScreen" />
+        <activity
+            android:name=".museums.AllMuseumsActivity"
+            android:parentActivityName=".HomeScreen" />
+        <activity
+            android:name=".spots.AllSpotsActivity"
+            android:parentActivityName=".HomeScreen" />
+        <activity
+            android:name=".WebViewTime"
+            android:parentActivityName=".HomeScreen" />
+        <activity
+            android:name=".WebViewFood"
+            android:parentActivityName=".HomeScreen" />
+        <activity
+            android:name=".WebViewActivityBudget"
+            android:parentActivityName=".HomeScreen" />
+        <activity android:name=".HomeScreen" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

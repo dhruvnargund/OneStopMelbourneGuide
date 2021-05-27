@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_spot_item_image"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:id="@+id/image_view_spot_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/australian_centre_for_the_moving_image"
+                tools:ignore="ContentDescription" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/text_view_spot_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:layout_toEndOf="@id/card_view_spot_item_image"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeStepGranularity="2sp"
+            tools:text="Title" />
+
+        <RatingBar
+            android:id="@+id/rating_bar_spot_item"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_spot_item_title"
+            android:layout_margin="5dp"
+            android:layout_toEndOf="@id/card_view_spot_item_image"
+            android:progressTint="#FFCC01" />
+
+        <TextView
+            android:id="@+id/text_view_spot_item_description"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@id/rating_bar_spot_item"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toEndOf="@id/card_view_spot_item_image"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textColor="@color/black"
+            tools:text="@tools:sample/lorem/random"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="10sp"
+            app:autoSizeMaxTextSize="15sp"
+            app:autoSizeStepGranularity="2sp" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

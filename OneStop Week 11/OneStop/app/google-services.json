@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "988991941156",
+    "project_id": "onestopmelbourneguide",
+    "storage_bucket": "onestopmelbourneguide.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988991941156:android:5cba44427e6095e02d06b1",
+        "android_client_info": {
+          "package_name": "com.dhruvdevapp.onestop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "988991941156-nbvl31u91uk169okkkls6fnj9ggrl3jh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTXo713YnwJGXfRhejs5HA8gEZYtdLUGM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "988991941156-nbvl31u91uk169okkkls6fnj9ggrl3jh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

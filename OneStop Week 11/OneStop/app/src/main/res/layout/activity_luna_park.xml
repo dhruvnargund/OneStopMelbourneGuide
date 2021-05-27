@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".spots.spotpages.LunaPark">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/luna_wallpaper"
+        tools:ignore="ContentDescription" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_item_data"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="280dp"
+        android:background="@color/white"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/text_view_luna_title"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/luna_park"
+                android:textColor="@color/black"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeStepGranularity="2sp"
+                app:autoSizeTextType="uniform" />
+
+
+            <RatingBar
+                android:id="@+id/rating_bar_luna"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/text_view_luna_title"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="20dp"
+                android:progressTint="#FFCC01"
+                android:rating="4" />
+
+            <RelativeLayout
+                android:id="@+id/luna_directions_button"
+                android:layout_width="110dp"
+                android:layout_height="25dp"
+                android:layout_below="@id/rating_bar_luna"
+                android:layout_alignEnd="@id/rating_bar_luna">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignBottom="@id/image_view_location_pin"
+                    android:layout_toStartOf="@id/image_view_location_pin"
+                    android:gravity="bottom"
+                    android:text="@string/directions"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/image_view_location_pin"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:paddingStart="4dp"
+                    android:paddingBottom="3dp"
+                    android:src="@drawable/location_pin"
+                    tools:ignore="ContentDescription,RtlSymmetry" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="370dp"
+                android:layout_below="@id/luna_directions_button"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="25dp"
+                android:justificationMode="inter_word"
+                android:text="@string/luna_park_melbourne_is_a_historic_amusement_park_located_on_the_foreshore_of_port_phillip_bay_in_st_kilda_melbourne_victoria_it_opened_on_13_december_1912_with_a_formal_opening_a_week_later_and_has_been_operating_almost_continuously_ever_since_luna_park_was_built_by_american_showmen_j_d_williams_2_together_with_the_phillips_brothers_harold_leon_and_herman_not_much_is_known_of_their_background_but_they_were_involved_in_the_building_of_picture_theatres_in_spokane_washington_and_vancouver_before_coming_to_sydney_in_1909_and_quickly_establishing_a_chain_of_luxury_cinemas_in_that_city_and_then_melbourne"
+                android:textColor="#3C3B3B"
+                app:autoSizeMaxTextSize="17sp"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeStepGranularity="2sp"
+                app:autoSizeTextType="uniform"
+                tools:targetApi="o" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_all_spots_luna_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card_view_item_data"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:ignore="InvalidId" />
+
+</RelativeLayout>
